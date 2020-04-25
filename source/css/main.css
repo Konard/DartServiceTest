@@ -1,0 +1,182 @@
+.preview {
+    background: url(../image/preview.png) no-repeat center / cover;
+}
+
+.preview__body {
+    min-height: 100vh;
+}
+
+.preview__top {
+    margin: 360px 0 0 0;
+    text-align: center;
+}
+
+.preview__title {
+    min-height: 60px;
+    padding: 0 15px;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.preview__desc {
+    padding: 0 15px;
+    margin: 52px 0 0 0;
+    font-size: 22px;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 1.1px;
+}
+
+.preview__bottom {
+    display: flex;
+    justify-content: center;
+    margin: 180px 0 0 0;
+}
+
+.preview__link {
+    width: 220px;
+    min-height: 70px;
+    padding: 5px;
+    margin: 10px 14px;
+    color: #fff;
+    outline: solid 3px #f8f8f8;
+}
+
+.preview__link:hover {
+    outline: solid 3px transparent;
+}
+
+.preview__link-arrow {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.preview__link-arrow-img {
+    width: 100%;
+    min-height: 3vh;
+    fill: #fff;
+    animation-name: flickering-movement;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flickering-movement {
+    0% {
+        fill: #fff;
+    }
+
+    50% {
+        fill: #00897b;
+    }
+
+    100% {
+        fill: #fff;
+    }
+}
+
+.preview__link-arrow:hover .preview__link-arrow-img {
+    animation-name: flickering-movement-hover;
+    animation-duration: 0.8s;
+}
+
+@keyframes flickering-movement-hover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        fill: #3949ab;
+        transform: translateY(15px);
+    }
+}
+
+.about__body {
+    padding: 122px 15px 110px 15px;
+}
+
+.about__top {
+    text-align: center;
+}
+
+.about__bottom {
+    margin: 100px 0 0 0;
+}
+
+.services {
+    background-color: #e4fdf9;
+}
+
+.services__body {
+    height: 2000px;
+    padding: 172px 15px 0 15px;
+}
+
+.services__top {
+    text-align: center;
+}
+
+.services__bottom {
+    margin: 105px 0 0 0;
+}
+
+.row__link {  
+    width: 150px;
+    min-height: 56px;
+    padding: 5px;
+    margin: 50px auto 53px auto;
+    color: #000;
+    outline: solid 3px #000; 
+}
+
+@media (max-width: 1200px) {
+
+    .preview__title {
+        font-size: 48px;
+    }
+
+    .preview__desc {
+        font-size: 18px;
+    }
+
+    .preview__link-arrow {
+        position: relative;
+        margin: 20px 0 50px 0;
+    }
+}
+
+@media (max-height: 800px) {
+
+    .preview__link-arrow {
+        position: relative;
+        margin: 20px 0 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .preview__title {
+        font-size: 32px;
+    }
+
+    .preview__desc {
+        font-size: 16px;
+    }
+
+    .preview__bottom {
+        display: inline-block;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .preview__link {
+        width: 100%;
+        margin: 5px auto 30px auto;
+    }
+}
