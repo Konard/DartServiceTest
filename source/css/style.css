@@ -162,8 +162,9 @@ html {
     margin: 0;
 }
 
-.row__svg {
-    margin: 0 0 30px 0;
+.row__svg { 
+    margin: 0 0 30px 0; 
+    transition: 0.5s;
 }
 
 .row__subtitle {
@@ -190,7 +191,6 @@ html {
 
 .induced { 
     fill: #fff !important; 
-    transition: 0.5s;
 }
 
 @media (max-width: 1200px) {
