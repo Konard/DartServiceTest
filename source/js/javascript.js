@@ -6,20 +6,18 @@ burger.addEventListener("click", function () {
     navigation.classList.toggle('active');
 });
 
-//Эта версия работает, но при наведении добавляет класс всем пунктам. 
+// This version works, for each row__link only corresponding row_svg is used.
+// Эта версия работает, для каждого row__link используется только соответствующий ему row_svg
 const rowLink = document.querySelectorAll('.row__link');
-const rowSvg = document.querySelectorAll('.row__svg');
 
 rowLink.forEach(function (element) {
+	var rowItem = element.parentNode;
+	var rowSvg = rowItem.querySelector('.row__svg');
     element.addEventListener("mouseover", function () {
-        for (let i = 0; i < rowSvg.length; i++) {
-            rowSvg[i].classList.add("induced");
-        }
+        rowSvg.classList.add("induced");
     });
     element.addEventListener("mouseout", function () {
-        for (let i = 0; i < rowSvg.length; i++) {
-            rowSvg[i].classList.remove("induced");
-        }
+		rowSvg.classList.remove("induced");
     });
 })  
 
