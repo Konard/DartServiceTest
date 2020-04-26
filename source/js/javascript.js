@@ -11,13 +11,13 @@ burger.addEventListener("click", function () {
 const rowLink = document.querySelectorAll('.row__link');
 
 rowLink.forEach(function (element) {
-	var rowItem = element.parentNode;
-	var rowSvg = rowItem.querySelector('.row__svg');
+    var rowItem = element.parentNode;
+    var rowSvg = rowItem.querySelector('.row__svg');
     element.addEventListener("mouseover", function () {
         rowSvg.classList.add("induced");
     });
     element.addEventListener("mouseout", function () {
-		rowSvg.classList.remove("induced");
+        rowSvg.classList.remove("induced");
     });
 })  
 
